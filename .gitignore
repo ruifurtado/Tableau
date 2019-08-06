@@ -94,3 +94,6 @@ download/
 
 # Config file should not be updated since it has sensible info
 myconfig.ini
+
+# vs file
+.vscode/
