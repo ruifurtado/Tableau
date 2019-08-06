@@ -91,3 +91,6 @@ ENV/
 
 # Download folder
 download/
+
+# Config file should not be updated since it has sensible info
+myconfig.ini
