@@ -1,10 +1,8 @@
-import sample.core as c
-import sample.download as d
 import getpass
 import os
 import configparser
 import tableauserverclient as TSC
-import functools
+import argparse
 
 serverObject=""
 
@@ -12,7 +10,7 @@ def exit():
     return "exit"
 
 def help():
-    return c.hmm()
+    return ""
 
 def downloadResource(): # TODO HERE: make the function check if the file exists or not
     path = r'.\download'
