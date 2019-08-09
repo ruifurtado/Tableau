@@ -25,6 +25,8 @@ def actionToTake(argument,session):
     elif int(argument)==5:
         func=downloadWorkbook(session)
     elif int(argument)==6:
+        func=updateWorkbook(session)
+    elif int(argument)==7:
         func=exit(session)
     return func
 
@@ -47,7 +49,13 @@ def listDataSources(session):
 def downloadWorkbook(session):
     workbook=TableauWorkbook(session)
     workbook.initWorkbook()
-    workbook.download()
+    answer=workbook.download()
+    return answer
+
+def updateWorkbook(session):
+    workbook=TableauWorkbook(session)
+    workbook.initWorkbook()
+    workbook.update()
 
 def exit(session):
     session.disconnectFromServer()
@@ -60,7 +68,7 @@ def main():
     while result!="exit":
         action = 0
         result = 0
-        print("1: List sites\n2: List projects\n3: List workbooks\n4: List data sources\n5: Download workbook \n6:Exit\n")
+        print("1: List sites\n2: List projects\n3: List workbooks\n4: List data sources\n5: Download workbook\n6: Update workbook\n7: Exit\n")
         action = input("Action to take: ") 
         result=actionToTake(action,session)
 

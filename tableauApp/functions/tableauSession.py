@@ -20,6 +20,7 @@ class TableauSession():
                 self.username = config['SESSION']['username']
                 self.password = config['SESSION']['password']
                 self.site = config['SESSION']['site']
+                self.tableauPath = config['SESSION']['tableauPath']
             if answer=='No':
                 print("\n-> Input user parameters\n")
                 self.serverUrl = input("Server link: ")

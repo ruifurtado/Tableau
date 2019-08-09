@@ -90,7 +90,7 @@ ENV/
 .ropeproject
 
 # Download folder
-download/
+repository/
 
 # Config file should not be updated since it has sensible info
 myconfig.ini
